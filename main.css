@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.icon{
+    height: 32px;
+}
+.wraper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.conteiner{
+    flex-grow: 1;
+}
+.header{
+    height: 100px;
+}
+.delitel{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #CCC;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~стили для Меню Вариант №1~~~~~~~~~~~~~~~~~~*/
+.menu__list{display: flex; list-style-type: none; position: relative; background-color: rgb(255, 84, 32);}
+.menu__list>li{ border-left: 1px solid #CCC;}
+.menu__list>.menu__list__element:last-child{ border-right: 1px solid #CCC;}
+.menu__list>li>a{ text-decoration: none; display: block; font-size: 16px; line-height: 36px; padding: 0 16px;}
+.menu__list>li>a:link{ color: #643a15;}
+.menu__list>li>a:visited{color: rgb(0, 0, 0);}
+.menu__list>li>a:hover{color: rgb(255, 255, 255);}
+.menu__list>li:hover{background-color: rgba(255, 230, 4, 0.4);}
+.menu__sublist{ list-style-type: none; position: absolute; background-color: rgb(255, 124, 16); display: none;}
+.menu__sublist>li>a{ text-decoration: none; display: block; font-size: 14px; line-height: 30px; padding: 0 12px;}
+.menu__sublist>li:hover{ background-color: rgba(255, 230, 4, 0.4);}
+.menu__list__element:hover .menu__sublist { display: inherit;}
+@media (max-width: 1024px){
+    .menu__list{flex-wrap: wrap;}
+    .menu__list>li{flex-grow: 1; text-align: center; border: 1px solid #CCC; border-radius: 5px; margin: 2px;}
+}
+@media (max-width: 667px){
+    .menu__list{flex-direction: column;}
+    .menu__list>li{ margin: 2px 20px;}
+    .menu__sublist{position: relative;}
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~стили для Меню Вариант №2~~~~~~~~~~~~~~~~~~*/
+.block1__list{display: flex; list-style-type: none; position: relative; background-color: #555;}
+.block1__list>li{margin: 2px;}
+.block1__list>li>a{display: block; text-decoration: none; font-size: 16px; line-height: 30px; padding: 12px 20px;}
+.block1__list>li>p{display: block; color: #CCC; font-size: 16px; line-height: 30px; padding: 12px 20px;}
+.block1__list>li>a:link{color: #CCC;}
+.block1__list>li>a:visited{color: rgb(184, 215, 255);}
+.block1__list>li>a:hover{color: #CCC; background-color: rgb(79, 98, 104);}
+.block1__list>li>p:hover{color: #CCC; background-color: rgb(79, 98, 104);}
+.block1__sublist{list-style-type: none; position: absolute; display: none; background-color: #555;}
+.block1__list>li:hover .block1__sublist{display: inherit;}
+.block1__sublist>li>a{display: block; text-decoration: none; font-size: 14px; line-height: 24px; padding: 8px 20px;}
+.block1__sublist>li>a:link{color: #CCC;}
+.block1__sublist>li>a:visited{color: rgb(184, 215, 255);}
+.block1__sublist>li>a:hover{color: #CCC; background-color: rgb(79, 98, 104);}
+@media (max-width: 667px){
+    .block1__sublist{position: relative; }
+    .block1__list{flex-direction: column; }
+    .block1__list>li{border: 1px solid #CCC; }
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~"Эксперементы с  блоками"~~~~~~~~~~~~~~~~~~*/
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 10px auto;
+}
+
+@keyframes exper {
+    from{
+        background-color: #00ad09;
+    }
+
+    to{
+        background-color: #ff0000;
+    }
+}
+
+.kvadrat{
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ff0000;
+    animation: exper  2s /*infinite*/ 1 ease-in-out;
+    background-color: #00ad09;
+}
+/*
+transform: matrix(1, 0, 0, 1, 0, 0);
+1.0 Значение a изменяет масштаб по горизонтали. Значение от 0 до 1 уменьшает элемент, больше 1 — увеличивает.
+0   Значение c деформирует (сдвигает) стороны элемента по оси Y, положительное значение — вверх, отрицательное — вниз.
+0   Значение b деформирует (сдвигает) стороны элемента по оси X, положительное значение — влево, отрицательное — вправо.
+1.0 Значение d изменяет масштаб по вертикали. Значение меньше 1 уменьшает элемент, больше 1 — увеличивает.
+0   Значение x смещает элемент по оси X, положительное — вправо, отрицательное — влево.
+0   Значение y смещает элемент по оси Y, положительное значение — вниз, отрицательное — вверх.
+*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.main{
+    min-height: 300px;
+}
+.footer{
+    height: 100px;
+}
