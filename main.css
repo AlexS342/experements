@@ -56,7 +56,7 @@
 .block1__list>li>a:hover{color: #CCC; background-color: rgb(79, 98, 104);}
 .block1__list>li>p:hover{color: #CCC; background-color: rgb(79, 98, 104);}
 .block1__sublist{list-style-type: none; position: absolute; display: none; background-color: #555;}
-.block1__list>li:hover .block1__sublist{display: inherit;}
+.block1__list>li:hover .block1__sublist{display: inherit; animation: exper  0.5s /*infinite*/ 1 ease-in-out;}
 .block1__sublist>li>a{display: block; text-decoration: none; font-size: 14px; line-height: 24px; padding: 8px 20px;}
 .block1__sublist>li>a:link{color: #CCC;}
 .block1__sublist>li>a:visited{color: rgb(184, 215, 255);}
@@ -80,11 +80,11 @@
 
 @keyframes exper {
     from{
-        background-color: #00ad09;
+        opacity: 0;
     }
 
     to{
-        background-color: #ff0000;
+        opacity: 1;
     }
 }
 
